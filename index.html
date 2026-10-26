@@ -1,131 +1,47 @@
-
-<!DOCTYPE html>
+!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101827">
-  <title>Zenoba | Smart Finds, Better Living</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #172033;
-      background: #f7f8fb;
-    }
-    header {
-      background: #101827;
-      color: white;
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-    .logo { font-size: 28px; font-weight: 800; letter-spacing: 2px; }
-    header a { color: white; text-decoration: none; }
-    .hero {
-      background: linear-gradient(135deg, #101827, #243d68);
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
-    .hero h1 { font-size: clamp(34px, 6vw, 58px); margin: 0 0 16px; }
-    .hero p { font-size: 18px; line-height: 1.6; color: #dbe5f5; }
-    .button {
-      display: inline-block;
-      background: #f4c542;
-      color: #172033;
-      padding: 14px 24px;
-      margin-top: 15px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main { max-width: 1100px; margin: auto; padding: 30px 18px; }
-    h2 { text-align: center; margin: 18px 0 25px; }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-    .product {
-      background: white;
-      border-radius: 14px;
-      padding: 22px;
-      text-align: center;
-      box-shadow: 0 3px 15px #15233b12;
-    }
-    .product .emoji { font-size: 54px; }
-    .product p { color: #5c6678; line-height: 1.5; }
-    .product .button { margin-top: 4px; }
-    .notice {
-      background: #fff8df;
-      padding: 15px;
-      border-radius: 10px;
-      line-height: 1.6;
-      margin-top: 28px;
-    }
-    footer {
-      background: #101827;
-      color: #dbe5f5;
-      padding: 25px 18px;
-      text-align: center;
-      line-height: 1.8;
-    }
-    footer a { color: #f4c542; }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171311">
+<title>ZENŌBA — Clothing & Everyday Style</title>
+<style>
+:root{--ink:#171311;--paper:#fbf7f1;--muted:#756d66;--accent:#c86b45;--line:#e8dfd5;--card:#fffdfa}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}.topnote{background:var(--ink);color:white;text-align:center;padding:9px 12px;font-size:11px;letter-spacing:1.3px}header{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{max-width:1180px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-family:Georgia,serif;font-size:27px;font-weight:bold;letter-spacing:2px}.brand span{color:var(--accent)}.navlinks{display:flex;gap:22px;font-size:13px}.navlinks a:hover{color:var(--accent)}.navright{display:flex;align-items:center;gap:10px}.search{width:175px;padding:10px 12px;border:1px solid var(--line);border-radius:999px;background:white;outline:none}.cart{border:1px solid var(--line);background:#fffdfa;border-radius:999px;padding:10px 13px;font-size:12px}.hero{max-width:1180px;margin:22px auto 0;padding:0 20px}.hero-inner{min-height:380px;border-radius:22px;overflow:hidden;background:linear-gradient(105deg,rgba(22,17,14,.92),rgba(22,17,14,.35)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=85') center/cover;display:flex;align-items:center;padding:clamp(28px,7vw,82px);color:white}.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#f3c7b2}h1{font-family:Georgia,serif;font-size:clamp(42px,7vw,76px);line-height:.98;max-width:650px;margin:16px 0}.hero p{color:#f3e9e1;line-height:1.7;max-width:490px;font-size:15px}.btn{display:inline-block;border:0;border-radius:999px;background:var(--accent);color:white;padding:13px 20px;font-weight:bold;font-size:13px;cursor:pointer}.btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.65);margin-left:8px}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px auto}.trust div{border:1px solid var(--line);border-radius:12px;padding:15px;text-align:center;font-size:12px;color:var(--muted);background:#fffdfa}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:52px 0 20px}.sectionhead h2{font-family:Georgia,serif;font-size:clamp(27px,4vw,38px);margin:0}.sectionhead p{color:var(--muted);font-size:13px;margin:7px 0 0}.pills{display:flex;gap:8px;overflow:auto;padding:2px 0 12px}.pill{white-space:nowrap;border:1px solid var(--line);border-radius:999px;background:#fffdfa;padding:10px 15px;font-size:12px;cursor:pointer}.pill.active,.pill:hover{background:var(--ink);color:white;border-color:var(--ink)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.product{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-3px);box-shadow:0 12px 28px #28180d12}.product img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#eee4da}.productinfo{padding:14px}.tag{font-size:9px;text-transform:uppercase;letter-spacing:1.3px;color:var(--accent);font-weight:bold}.product h3{font-size:14px;line-height:1.35;margin:7px 0}.product p{font-size:11px;color:var(--muted);line-height:1.5;margin:0 0 12px}.price{font-size:13px;font-weight:bold}.product .btn{display:block;width:100%;margin-top:12px;padding:11px 8px;font-size:11px}.notice{background:#fff1df;color:#69492f;padding:12px 14px;border-radius:10px;font-size:12px;line-height:1.6;margin-top:18px}.banner{margin:54px 0 0;border-radius:18px;background:#eee2d5;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}.banner h2{font-family:Georgia,serif;font-size:30px;margin:0 0 8px}.banner p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}footer{margin-top:55px;background:var(--ink);color:#f6eee6;padding:36px 20px}.footinner{max-width:1180px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}footer p,footer a{font-size:12px;line-height:1.8;color:#c9bdb3}footer h3{font-size:12px;letter-spacing:1.5px;text-transform:uppercase}.disclaimer{max-width:1180px;margin:22px auto 0;border-top:1px solid #453a32;padding-top:15px;font-size:10px;color:#b5a79b;line-height:1.6}@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.navlinks{display:none}.search{width:120px}.hero-inner{min-height:340px}.footinner{grid-template-columns:1fr 1fr}.footinner>div:first-child{grid-column:1/-1}}@media(max-width:430px){.nav{padding:12px}.brand{font-size:22px}.search{width:95px;padding:9px}.cart{padding:9px}.hero,.wrap{padding-left:12px;padding-right:12px}.hero-inner{padding:25px 20px;min-height:360px}.hero p{font-size:13px}.trust{gap:6px}.trust div{padding:11px 5px;font-size:10px}.grid{gap:9px}.productinfo{padding:10px}.product h3{font-size:12px}.product .btn{font-size:10px}.banner{padding:22px;display:block}.banner .btn{margin-top:15px}.footinner{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo">ZENOBA</div>
-    <a href="#products">Shop Products ↓</a>
-  </header>
-
-  <section class="hero">
-    <h1>Smart Finds.<br>Better Living.</h1>
-    <p>Discover useful products for your everyday life.</p>
-    <a class="button" href="#products">Explore Products</a>
-  </section>
-
-  <main>
-    <h2 id="products">Explore Our Products</h2>
-    <div class="products">
-      <article class="product">
-        <div class="emoji">🔌</div>
-        <h3>Cable Organizer</h3>
-        <p>Keep your desk and cables neat and organized.</p>
-        <p><strong>Price: Coming Soon</strong></p>
-        <a class="button" href="#contact">Ask About Product</a>
-      </article>
-      <article class="product">
-        <div class="emoji">🏠</div>
-        <h3>Home Essentials</h3>
-        <p>Simple everyday items for a more organized home.</p>
-        <p><strong>Price: Coming Soon</strong></p>
-        <a class="button" href="#contact">Ask About Product</a>
-      </article>
-      <article class="product">
-        <div class="emoji">📱</div>
-        <h3>Useful Gadgets</h3>
-        <p>Discover practical accessories for daily use.</p>
-        <p><strong>Price: Coming Soon</strong></p>
-        <a class="button" href="#contact">Ask About Product</a>
-      </article>
-    </div>
-
-    <div class="notice">
-      <strong>Coming soon!</strong> We are checking products, prices and delivery
-      options before accepting orders. No payment or order is taken on this demo page.
-    </div>
-  </main>
-
-  <footer id="contact">
-    <h3>ZENOBA</h3>
-    <p>Smart Finds. Better Living.</p>
-    <p>Questions? Contact us after our store launches.</p>
-    <small>Demo storefront. Products and ordering are not active yet.</small>
-  </footer>
-</body>
-</html>
+<div class="topnote">ZENŌBA • EVERYDAY STYLE, MADE SIMPLE • DEMO STORE</div>
+<header><nav class="nav" aria-label="Main navigation">
+<a class="brand" href="#" aria-label="Zenoba home">ZENŌ<span>BA</span></a>
+<div class="navlinks"><a href="#men">Men</a><a href="#women">Women</a><a href="#accessories">Accessories</a><a href="#all-products">All products</a></div>
+<div class="navright"><input id="search" class="search" type="search" placeholder="Search clothes…" aria-label="Search products"><button class="cart" id="cartBtn" type="button">♡ Saved <span id="savedCount">0</span></button></div>
+</nav></header>
+<section class="hero"><div class="hero-inner"><div><div class="eyebrow">New season • Everyday essentials</div><h1>Wear your<br>own story.</h1><p>Discover everyday fashion for him and her — from relaxed tees and denim to kurtis, dresses and finishing touches.</p><a class="btn" href="#all-products">Explore the collection</a><a class="btn secondary" href="#categories">Browse styles</a></div></div></section>
+<main class="wrap">
+<div class="trust"><div>✦ Everyday styles</div><div>✦ Men & women</div><div>✦ Mobile-friendly store</div></div>
+<section id="categories"><div class="sectionhead"><div><h2>Find your fit</h2><p>Choose a department to explore.</p></div></div><div class="pills" id="categoryPills"><button class="pill active" data-filter="all">All items</button><button class="pill" data-filter="men">Men</button><button class="pill" data-filter="women">Women</button><button class="pill" data-filter="pants">Pants & trousers</button><button class="pill" data-filter="tops">T-shirts & shirts</button><button class="pill" data-filter="ethnic">Ethnic wear</button><button class="pill" data-filter="accessories">Accessories</button></div></section>
+<section id="all-products"><div class="sectionhead"><div><h2>The style edit</h2><p>Explore clothing categories. Prices and availability will be confirmed before launch.</p></div></div>
+<div class="grid" id="productGrid">
+<article class="product" data-cats="men tops"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Plain casual T-shirt"><div class="productinfo"><div class="tag">Men · Tops</div><h3>Everyday T-shirts</h3><p>Relaxed basics for daily outfits.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Everyday T-shirts">Save for later</button></div></article>
+<article class="product" data-cats="men tops"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=80" alt="Men's casual shirt"><div class="productinfo"><div class="tag">Men · Shirts</div><h3>Casual Shirts</h3><p>Easy styles for everyday wear.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Casual Shirts">Save for later</button></div></article>
+<article class="product" data-cats="men pants"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80" alt="Denim jeans"><div class="productinfo"><div class="tag">Men · Bottoms</div><h3>Jeans & Denim</h3><p>Denim styles for casual looks.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Jeans & Denim">Save for later</button></div></article>
+<article class="product" data-cats="men pants"><img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=80" alt="Casual trousers"><div class="productinfo"><div class="tag">Men · Bottoms</div><h3>Pants & Trousers</h3><p>Comfortable options for daily outfits.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Pants & Trousers">Save for later</button></div></article>
+<article class="product" data-cats="women tops"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80" alt="Women's fashion outfits"><div class="productinfo"><div class="tag">Women · Tops</div><h3>Tops & T-shirts</h3><p>Versatile everyday wardrobe pieces.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Tops & T-shirts">Save for later</button></div></article>
+<article class="product" data-cats="women pants"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80" alt="Women's jeans"><div class="productinfo"><div class="tag">Women · Bottoms</div><h3>Women’s Jeans & Pants</h3><p>Everyday denim and trouser styles.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Women’s Jeans & Pants">Save for later</button></div></article>
+<article class="product" data-cats="women ethnic"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80" alt="Indian ethnic wear"><div class="productinfo"><div class="tag">Women · Ethnic</div><h3>Kurtis & Suit Sets</h3><p>Ethnic-inspired styles for everyday wear.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Kurtis & Suit Sets">Save for later</button></div></article>
+<article class="product" data-cats="women ethnic"><img src="https://images.unsplash.com/photo-1583391733958-6c78276477e3?auto=format&fit=crop&w=700&q=80" alt="Women's dress"><div class="productinfo"><div class="tag">Women · Dresses</div><h3>Dresses & Co-ords</h3><p>One-step outfits for a fresh look.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Dresses & Co-ords">Save for later</button></div></article>
+<article class="product" data-cats="men accessories"><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=700&q=80" alt="Cap accessory"><div class="productinfo"><div class="tag">Accessories</div><h3>Caps & Accessories</h3><p>Small details to finish an outfit.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Caps & Accessories">Save for later</button></div></article>
+<article class="product" data-cats="women accessories"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Fashion bag"><div class="productinfo"><div class="tag">Accessories</div><h3>Bags & Everyday Carry</h3><p>Practical accessories for daily use.</p><div class="price">Price to be confirmed</div><button class="btn productBtn" type="button" data-name="Bags & Everyday Carry">Save for later</button></div></article>
+</div></section>
+<div class="notice" id="notice"><strong>Demo store:</strong> These are sample categories and images, not confirmed inventory. Verify actual products, sizes, stock, shipping and returns with a supplier before listing items for sale. No checkout or payment is enabled.</div>
+<section class="banner" id="accessories"><div><h2>Good style, less fuss.</h2><p>Build your everyday wardrobe with Zenoba.<br>Real products and final pricing will be added after supplier checks.</p></div><a class="btn" href="#categories">Explore categories</a></section>
+</main>
+<footer id="men"><div class="footinner"><div><a class="brand" href="#" style="color:#fff">ZENŌ<span>BA</span></a><p>Everyday clothing and style for everyone.</p></div><div><h3>Shop</h3><p><a href="#categories">Men’s Wear</a><br><a href="#categories">Women’s Wear</a><br><a href="#categories">Pants & Trousers</a><br><a href="#categories">Accessories</a></p></div><div><h3>Information</h3><p><a href="#all-products">Collections</a><br><a href="#categories">Categories</a><br><a href="#notice">Store status</a></p></div></div><div class="disclaimer">© <span id="year"></span> Zenoba. Demo storefront. No orders or payments are currently accepted. Product images are illustrative; actual products, prices and availability are not yet confirmed.</div></footer>
+<script>
+const filterButtons=[...document.querySelectorAll('[data-filter]')],cards=[...document.querySelectorAll('.product')];
+function applyFilter(filter){filterButtons.forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));cards.forEach(card=>card.hidden=filter!=='all'&&!card.dataset.cats.split(' ').includes(filter))}
+filterButtons.forEach(btn=>btn.addEventListener('click',()=>applyFilter(btn.dataset.filter)));
+document.getElementById('search').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();cards.forEach(card=>card.hidden=!card.innerText.toLowerCase().includes(q));filterButtons.forEach(b=>b.classList.remove('active'))});
+let saved=new Set();document.querySelectorAll('.productBtn').forEach(btn=>btn.addEventListener('click',()=>{const name=btn.dataset.name;if(saved.has(name)){saved.delete(name);btn.textContent='Save for later'}else{saved.add(name);btn.textContent='Saved ✓'}document.getElementById('savedCount').textContent=saved.size}));
+document.getElementById('cartBtn').addEventListener('click',()=>alert(saved.size?'Saved for later: '+[...saved].join(', '):'No saved items yet. Tap a product button to save it for later.'));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script></body></html>
